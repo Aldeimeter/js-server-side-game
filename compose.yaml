@@ -1,0 +1,13 @@
+# Artem Zaitsev
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "8082:8082"
+    environment:
+      - NODE_ENV=development
+    restart: always
+    user: app
